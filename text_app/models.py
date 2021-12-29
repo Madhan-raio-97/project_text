@@ -46,4 +46,4 @@ class text(BaseModel):
         return self.tag.title + " : " + self.text
 
     class Meta:
-        db_table = 'Text'
+        db_table = 'text'
