@@ -25,7 +25,7 @@ class TextSerializer(serializers.ModelSerializer):
         fields = ['title', 'text']
 
     def create(self, validated_data):
-        obj, created = tag.objects.get_or_create(title=validated_data['tags'])
+        obj, created = tag.objects.get_or_create(title=validated_data['title'])
         if obj:
             text.objects.create(tag=obj, text=validated_data['text'], created_by=self.context.get('request').user)
         if created:
