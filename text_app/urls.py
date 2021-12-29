@@ -6,7 +6,7 @@ from .views import TagView, TextView
 
 router = routers.DefaultRouter()
 router.register(r'tags', TagView)
-router.register(r'shorttext', TextView)
+router.register(r'shottext', TextView)
 
 urlpatterns = [
     path('', include(router.urls)),
